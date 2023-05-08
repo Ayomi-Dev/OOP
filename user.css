@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Robot', sans-serif;
+}
+body{
+    background: #fff;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.container .header{
+    width: calc(100% - 0%);
+    position: fixed;
+    height: 60px;
+    background: rgb(0, 65, 100);
+    z-index: 1;
+    top: 0;
+}
+.container .header .header-menu{
+    width: calc(100%-0%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+.header-menu .title{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bolder;
+    position: absolute;
+    margin-left: 30px;
+}
+.header-menu .title span{
+    color: rgb(255, 155, 0)
+}
+.header-menu .sidebar-btn{
+    font-size: 1.2rem;
+    color: rgb(255, 155, 0);
+    cursor: pointer;
+}
+.header-menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style:  none;
+}
+.header-menu ul li{
+    padding: 0 10px;
+}
+.header-menu ul li a{
+    color: rgb(0, 65, 100);
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px 10px;
+}
+.container .sidebar{
+    height: 100% ;
+    position: fixed;
+    overflow-y: auto;
+    width: 50px;
+    top: 60px;
+    z-index: 1;
+    background: rgb(0, 65, 100);
+    transition: 0.5s;
+    transition-property: width;
+}
+.container.active .sidebar{
+    width: 250px;
+    overflow-y: auto;
+}
+.container .sidebar-menu{
+    overflow: hidden;
+}
+.container .sidebar-menu .profile img, 
+.container .sidebar-menu .profile p{
+    display: none
+}
+.container.active .sidebar-menu .profile img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.container.active .sidebar-menu .profile p{
+    display: block;
+    color: rgb(255, 155, 0);
+    font-weight: bolder;
+    padding-top: 10px;
+}
+.container .sidebar-menu .menu-items{
+    overflow: hidden;
+    width: 250px;
+    list-style: none;
+}
+
+.container .sidebar-menu .menu-icon{
+    display: block;
+    color: #fff;
+    padding: 20px 15px;
+    position: relative;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+.container.active .sidebar-menu .menu-icon{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    padding: 20px 15px;
+    position: relative;
+    transition: 0.5s;
+    transition-property: color;
+}
+.container.active .sidebar-menu .menu-icon .icon{
+    display: flex;
+}
+.container .sidebar-menu .menu-icon .icon span, 
+.container .sidebar-menu .menu-icon .drop-down{
+    display: none;
+}
+.container.active .sidebar-menu .menu-icon span{
+    display: block;
+    color: #fff;
+    transition: color 0.5s;
+    font-weight: bolder;
+    padding-right: 15px;
+}
+.container .sidebar-menu .menu-icon i:hover, .container .sidebar-menu .menu-icon span:hover,
+.container.active .sidebar-menu .menu-icon .drop-down:hover{
+    color: rgb(255, 155, 0);
+}
+.container .sidebar-menu .menu-icon i{
+    margin-right: 15px;
+    color: #fff;
+    transition: color 0.5s;
+}
+.container.active .sidebar-menu .menu-icon .drop-down{
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: color 0.5s;
+}
+.container .sidebar-menu .menu-items .sub-menu{
+    background: #fff;
+    overflow: hidden;
+    transition: background 0.5s, max-height 0.5s;
+    max-height: 0;
+}
+.container .sidebar .sidebar-menu .menu-items .sub-menu a{
+    display: block;
+    position: relative;
+    border-bottom: 2px solid rgb(0, 65, 150);
+    padding:10px 15px;
+    white-space: nowrap;
+    color:rgb(0, 65, 100);
+    font-weight: bolder;
+    transition: background 0.5s;
+    overflow: hidden;
+}
+.container.active .sidebar .sidebar-menu .menu-items .sub-menu a{
+    display: flex;
+    align-items: center;
+}
+.container.active .sidebar-menu .sub-menu a:hover{
+    background: rgb(200, 200, 200);
+}
+.container .sidebar .sidebar-menu .menu-items .sub-menu a span{
+    display: none;
+}
+.container.active .sidebar .sidebar-menu .menu-items .sub-menu a span{
+    display: block;
+}
+.container.active .sidebar .sidebar-menu .menu-items .sub-menu a i{
+    font-size: 12px;
+    margin-right: 10px;
+}
+.container .sidebar .sidebar-menu .menu-items:target .sub-menu{
+    max-height: 500px;
+} 
+.main{
+    width: 100%;
+    height:100%;
+}
+.main img{
+    width: 100%;
+    height:100%;
+}
