@@ -336,5 +336,9 @@ body{
     .options .fas{
         font-size: 1rem;
     }
-
+}
+@media screen and (max-width: 500px) {
+    .logoMsg{
+        font-size: .6rem;
+    }
 }
